@@ -1,2 +1,54 @@
-<h1>Pages#porfolio</h1>
-<p>Find me in app/views/pages/porfolio.html.erb</p>
+
+
+
+
+
+
+<div class="container" style="width:80%; text-align: center;">
+
+	<div class="porfolio_pic_container" id="artware7"><%= image_tag('artware1', class: "masonryImage")%></div>
+	<div class="porfolio_pic_container" id="artware7"><%= image_tag('artware7', class: "masonryImage")%></div>
+	<div class="porfolio_pic_container" id="artware1" style="float: left;"><%= image_tag('artware2', class: "masonryImage")%></div>
+	<div class="porfolio_pic_container" id="artware2" style="float: left;"><%= image_tag('artware3', class: "masonryImage")%></div>
+	<div class="porfolio_pic_container" id="artware4" style="float: left;"><%= image_tag('artware5', class: "masonryImage")%></div>
+	<div class="porfolio_pic_container" id="artware3" style="float: left;"><%= image_tag('artware4', class: "masonryImage")%></div>
+	<div class="porfolio_pic_container" id="artware5" style="float: left;"><%= image_tag('artware6', class: "masonryImage")%></div>
+
+</div>
+
+<div class="container" style="width; 80%; text-align: center;">
+  
+
+	<div class="porfolio_pic_container" style="float: left; width: 100%"><%= image_tag('ml1', class: "masonryImage")%></div>
+	
+	<div class="porfolio_pic_container" id="ml1" style="float: left;"><%= image_tag('ml2', class: "masonryImage")%></div>
+	<div class="porfolio_pic_container" id="ml2" style="float: left;"><%= image_tag('ml5', class: "masonryImage")%></div>
+	<div class="porfolio_pic_container" id="star"><%= image_tag('orange_dipper.png', class: "masonryImage")%></div>
+	<div class="porfolio_pic_container" id="star"><%= image_tag('blue_giant.png', class: "masonryImage")%></div>
+
+	<div class="porfolio_pic_container" id="star"><%= image_tag('empty_space', class: "masonryImage")%></div>
+
+	<div class="porfolio_pic_container" id="star"><%= image_tag('white_giant.png', class: "masonryImage")%></div>
+
+	<div class="porfolio_pic_container" id="ml4" style="float: left;"><%= image_tag('ml3', class: "masonryImage")%></div>
+	<div class="porfolio_pic_container" id="ml5" style="float: left;"><%= image_tag('ml4', class: "masonryImage")%></div>
+	<div class="porfolio_pic_container" id="ml6" style="float: left;"><%= image_tag('ml6', class: "masonryImage")%></div>
+
+ 
+	
+</div>
+
+<script>
+	$(function(){
+ 
+	    var $container = $('#container');
+	   
+	    $container.imagesLoaded( function(){
+		    $container.masonry({
+		        itemSelector : '.masonryImage'
+		    });
+	    });
+	   
+	});
+
+</script>

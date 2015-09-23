@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Parallax Template - Materialize</title>
+  
 
 
   <!-- CSS  -->
@@ -16,13 +16,61 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+<div>
+
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="header center teal-text text-lighten-2">Nicolas Dev</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">intuitive development meets imagination.</h5>
+      </div>
+      <div class="row center">
+        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Porfolio</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+  <div class="parallax"><%= image_tag("bg1.jpg", alt: "Unsplashed background img 1")%></div>
+</div>
+<br/>
+<br/>
 
 <%= yield %>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script type="text/javascript" src="space.js"></script>
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<footer class="page-footer teal">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Would you like to contact</h5>
+        <p class="grey-text text-lighten-4">Would you like to contact me?</p>
+
+
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Settings</h5>
+        <ul>
+          <li><a class="white-text" href="#!"></a></li>
+          <li><a class="white-text" href="#!"></a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+          <li><a class="white-text" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Connect</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+          <li><a class="white-text" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+</footer>
 
 </body>
 </html>
