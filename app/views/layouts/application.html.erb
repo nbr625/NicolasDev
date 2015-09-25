@@ -16,7 +16,7 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-<div>
+
 
 <div id="index-banner" class="parallax-container">
   <div class="section no-pad-bot">
@@ -40,6 +40,8 @@
 
 <%= yield %>
 
+
+
 <footer class="page-footer teal">
   <div class="container">
     <div class="row">
@@ -61,7 +63,7 @@
       <div class="col l3 s12">
         <h5 class="white-text">Connect</h5>
         <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><div class="elevator waves-effect waves-light btn">Back to Top</div></li>
           <li><a class="white-text" href="#!">Link 2</a></li>
           <li><a class="white-text" href="#!">Link 3</a></li>
           <li><a class="white-text" href="#!">Link 4</a></li>
@@ -69,8 +71,53 @@
       </div>
     </div>
   </div>
+
   
 </footer>
+<script type="text/javascript">
+ 
+$(function() {
+    $.preloadCssImages();
+});
+ 
+</script>
+<script>
+    // Simple elevator usage.
+  var elementButton = document.querySelector('.elevator');
+  var elevator = new Elevator({
+    element: elementButton,
+    mainAudio: './audio/elevator.mp3', // Music from http://www.bensound.com/
+    endAudio: './audio/ding.mp3',
+    duration: 3000
+  });
+</script>
+<script type="text/javascript">
+  jQuery.preloadCssImages = function(){
+
+  var allImgs = [];//new array for all the image urls  
+  var k = 0; //iterator for adding images
+  var sheets = document.styleSheets;//array of stylesheets
+
+  for(var i = 0; i0 && imgUrls != ''){//loop array
+
+      var arr = jQuery.makeArray(imgUrls);//create array from regex obj        
+
+      jQuery(arr).each(function(){
+        allImgs[k] = new Image(); //new img obj
+        allImgs[k].src = (this[0] == '/' || this.match('http://')) ? this : baseURL + this;     //set src either absolute or rel to css dir
+        k++;
+      });
+    }
+  }//loop
+  return allImgs;
+}
+
+$.preloadCssImages();
+
+//load into array
+var preloadedImgs = $.preloadCssImages();
+</script>
+
 
 </body>
 </html>

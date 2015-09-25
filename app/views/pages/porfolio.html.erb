@@ -5,50 +5,56 @@
 
 
 <div class="container" style="width:80%; text-align: center;">
+	<ul id="staggered-test">
+		<li class="porfolio_pic_container tabs-wrapper" id="artware7"><%= image_tag('artware1', class: "masonryImage")%></li>
 
-	<div class="porfolio_pic_container" id="artware7"><%= image_tag('artware1', class: "masonryImage")%></div>
-	<div class="porfolio_pic_container" id="artware7"><%= image_tag('artware7', class: "masonryImage")%></div>
-	<div class="porfolio_pic_container" id="artware1" style="float: left;"><%= image_tag('artware2', class: "masonryImage")%></div>
-	<div class="porfolio_pic_container" id="artware2" style="float: left;"><%= image_tag('artware3', class: "masonryImage")%></div>
-	<div class="porfolio_pic_container" id="artware4" style="float: left;"><%= image_tag('artware5', class: "masonryImage")%></div>
-	<div class="porfolio_pic_container" id="artware3" style="float: left;"><%= image_tag('artware4', class: "masonryImage")%></div>
-	<div class="porfolio_pic_container" id="artware5" style="float: left;"><%= image_tag('artware6', class: "masonryImage")%></div>
+		<li class="porfolio_pic_container tabs-wrapper" id="artware7"><%= image_tag('artware7', class: "masonryImage")%></li>
+
+		<li class="porfolio_pic_container tabs-wrapper" id="artware1" style="float: left;"><%= image_tag('artware2', class: "masonryImage")%></li>
+
+		<li class="porfolio_pic_container tabs-wrapper" id="artware2" style="float: left;"><%= image_tag('artware3', class: "masonryImage")%></li>
+		<li class="porfolio_pic_container tabs-wrapper" id="artware3" style="float: left;"><%= image_tag('artware4', class: "masonryImage")%></li>
+		<li class="porfolio_pic_container tabs-wrapper" id="artware4" style="float: left;"><%= image_tag('artware5', class: "masonryImage")%></li>
+
+		<li class="porfolio_pic_container tabs-wrapper" id="artware5" style="float: left;"><%= image_tag('artware6', class: "masonryImage")%></li>
+	</ul>
 
 </div>
 
 <div class="container" style="width; 80%; text-align: center;">
+	<ul id="staggered-test2">
   
 
-	<div class="porfolio_pic_container" style="float: left; width: 100%"><%= image_tag('ml1', class: "masonryImage")%></div>
+		<li class="porfolio_pic_container tabs-wrapper" style="float: left; width: 100%"><%= image_tag('ml1', class: "masonryImage")%></li>
 	
-	<div class="porfolio_pic_container" id="ml1" style="float: left;"><%= image_tag('ml2', class: "masonryImage")%></div>
-	<div class="porfolio_pic_container" id="ml2" style="float: left;"><%= image_tag('ml5', class: "masonryImage")%></div>
-	<div class="porfolio_pic_container" id="star"><%= image_tag('orange_dipper.png', class: "masonryImage")%></div>
-	<div class="porfolio_pic_container" id="star"><%= image_tag('blue_giant.png', class: "masonryImage")%></div>
+		<li class="porfolio_pic_container tabs-wrapper" id="ml1" style="float: left;"><%= image_tag('ml2', class: "masonryImage")%></li>
+		<li class="porfolio_pic_container tabs-wrapper" id="ml5" style="float: left;"><%= image_tag('ml4', class: "masonryImage")%></li>
+		<li class="porfolio_pic_container tabs-wrapper" id="star"><%= image_tag('orange_dipper.png', class: "masonryImage")%></li>
+		<li class="porfolio_pic_container tabs-wrapper" id="star"><%= image_tag('blue_giant.png', class: "masonryImage")%></li>
 
-	<div class="porfolio_pic_container" id="star"><%= image_tag('empty_space', class: "masonryImage")%></div>
+		<li class="porfolio_pic_container tabs-wrapper" id="star"><%= image_tag('empty_space', class: "masonryImage")%></li>
 
-	<div class="porfolio_pic_container" id="star"><%= image_tag('white_giant.png', class: "masonryImage")%></div>
+		<li class="porfolio_pic_container tabs-wrapper" id="star"><%= image_tag('white_giant.png', class: "masonryImage")%></li>
 
-	<div class="porfolio_pic_container" id="ml4" style="float: left;"><%= image_tag('ml3', class: "masonryImage")%></div>
-	<div class="porfolio_pic_container" id="ml5" style="float: left;"><%= image_tag('ml4', class: "masonryImage")%></div>
-	<div class="porfolio_pic_container" id="ml6" style="float: left;"><%= image_tag('ml6', class: "masonryImage")%></div>
 
- 
+
+		<li class="porfolio_pic_container tabs-wrapper" id="ml4" style="float: left;"><%= image_tag('ml3', class: "masonryImage")%></li>
+		<li class="porfolio_pic_container tabs-wrapper" id="ml2" style="float: left;"><%= image_tag('ml5', class: "masonryImage")%></li>
+
+		<li class="porfolio_pic_container tabs-wrapper" id="ml6" style="float: left;"><%= image_tag('ml6', class: "masonryImage") %>></li>
+	</ul>
+
 	
 </div>
 
-<script>
-	$(function(){
- 
-	    var $container = $('#container');
-	   
-	    $container.imagesLoaded( function(){
-		    $container.masonry({
-		        itemSelector : '.masonryImage'
-		    });
-	    });
-	   
-	});
 
+
+<script type="text/javascript">
+  var options = [
+    {selector: '#staggered-test', offset: 100, callback: 'Materialize.showStaggeredList("#staggered-test", 3000)' }, 
+    {selector: '#staggered-test2', offset: 2500, callback: 'Materialize.showStaggeredList("#staggered-test2", 3000)' }
+  ];
+  Materialize.scrollFire(options);
+    
 </script>
+

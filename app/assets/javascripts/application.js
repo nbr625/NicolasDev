@@ -16,6 +16,7 @@
 
 //= require masonry/box-maker
 //= require masonry/jquery.loremimages.min
+//= preloadCssImages.jQuery_v5
 //= require isotope/jquery.isotope
 //= require turbolinks
 //= require_tree .
@@ -6240,3 +6241,5 @@ Picker.extend( 'pickadate', DatePicker )
   });
 
 }( jQuery ));
+
+

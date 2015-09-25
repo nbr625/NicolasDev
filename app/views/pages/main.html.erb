@@ -5,32 +5,25 @@
 
 <div class="container">
   <div class="section">
-
     <!--   Icon Section   -->
     <div class="row">
       <div class="col s12 m4">
         <div class="icon-block">
           <h2 class="center brown-text"><%= link_to  image_tag('portfolio.png', height: '82', width: '82'), pages_porfolio_path %></h2>
           <h5 class="center">Porfolio</h5>
-
           <p class="light"></p>
         </div>
       </div>
-
       <div class="col s12 m4">
         <div class="icon-block">
           <h2 class="center brown-text"><%= link_to image_tag('github.png', height: '82', width: '82'), "https://github.com/nbr625", :target => "_blank"%></h2>
           <h5 class="center">Github</h5>
-
-          
         </div>
       </div>
-
       <div class="col s12 m4">
         <div class="icon-block">
           <h2 class="center brown-text"><%= image_tag('contact.png', height: '82', width: '82')%></h2>
           <h5 class="center">Message Me</h5>
-
           <p class="light"></p>
         </div>
       </div>
@@ -42,7 +35,6 @@
 
 <div class="container">
   <div class="section">
-
     <div class="row">
       <div class="col s12 center">
         <h3><i class="mdi-content-send brown-text"></i></h3>
@@ -50,7 +42,6 @@
         <p class="left-align light">As you might have guessed, my name is Nicolas. Nicolas Berrizbeitia. My job is to build responsive, proffessional platforms that suit the needs of my clients.  My passion...</p>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -79,7 +70,6 @@
 
 <div class="container">
   <div class="section">
-
     <div class="row">
       <div class="col s12 center">
         <h3><i class="mdi-content-send brown-text"></i></h3>
@@ -87,24 +77,18 @@
         <p>by focusing on:</p>
         <br/>
         <br/>
-
         <p>Balanced, <span class="purple_accent">stimulating</span> designs</p>
         <p>The<span="purple_accent">psychology</span> of Target Audience</p>
         <p>Solid Code base that maintains <span class="purple_accent">immersion</span></p>
         <p>But perhaps the most important...</p>
-
-
         <ul id="staggered-test">
-
           <li class="purple_accent s40">The Element of Surprise</li>
         </ul>
-        
       </div>
     </div>
-
   </div>
 </div>
-</div>
+
 
 
 
@@ -128,7 +112,7 @@
 <%= javascript_include_tag 'space.js' %>
 <script type="text/javascript">
   var options = [
-    {selector: '#staggered-test', offset: 200, callback: 'Materialize.showStaggeredList("#staggered-test")' }
+    {selector: '#staggered-test', offset: 200, callback: 'Materialize.showStaggeredList("#staggered-test", 3000)' }
   ];
   Materialize.scrollFire(options);
     
