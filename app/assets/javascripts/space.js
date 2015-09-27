@@ -4,6 +4,10 @@
 //
 
 (function () {
+	var script = document.createElement('script');
+	script.src = '//code.jquery.com/jquery-2.1.4.js';
+	script.type = 'text/javascript';
+	document.getElementsByTagName('head')[0].appendChild(script);
 
 	// Handles scroll events and attaches them to methods.
 	var ScrollController = function () {
