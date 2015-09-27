@@ -18,7 +18,9 @@
 //= require masonry/jquery.loremimages.min
 //= require preloadCssImages.jQuery_v5
 //= require isotope/jquery.isotope
-//= require turbolinks
+//= require jquery.turbolinks
+//= require turbolinks.js
+
 //= require_tree .
 
 
@@ -63,7 +65,7 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  *
 */
-
+var s = skrollr.init();
 // t: current time, b: begInnIng value, c: change In value, d: duration
 jQuery.easing['jswing'] = jQuery.easing['swing'];
 
