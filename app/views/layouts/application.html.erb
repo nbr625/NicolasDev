@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html padding>
+<html>
 <head>
   <title>NicolasDev</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -42,15 +42,23 @@
 
   
 </footer>
-<script src="space.js"></script>
+
 <script type="text/javascript">
- 
-$(function() {
-    $.preloadCssImages();
-});
- 
+  $( document ).ready(function() {
+    $('.parallax').parallax();
+  });
+
 </script>
-<script>
+<script type="text/javascript">
+  $( document ).ready(function() {
+    $(function() {
+        preloadCssImages();
+    });
+  };
+   
+</script>
+<script type="text/javascript">
+
     // Simple elevator usage.
   var elementButton = document.querySelector('.elevator');
   var elevator = new Elevator({
@@ -59,35 +67,39 @@ $(function() {
     endAudio: './audio/ding.mp3',
     duration: 3000
   });
+
 </script>
 <script type="text/javascript">
-  jQuery.preloadCssImages = function(){
+  $( document ).ready(function() {function(event) {
+    jQuery.preloadCssImages = function(){
 
-  var allImgs = [];//new array for all the image urls  
-  var k = 0; //iterator for adding images
-  var sheets = document.styleSheets;//array of stylesheets
+      var allImgs = [];//new array for all the image urls  
+      var k = 0; //iterator for adding images
+      var sheets = document.styleSheets;//array of stylesheets
 
-  for(var i = 0; i0 && imgUrls != ''){//loop array
+      for(var i = 0; i0 && imgUrls != ''){//loop array
 
-      var arr = jQuery.makeArray(imgUrls);//create array from regex obj        
+          var arr = jQuery.makeArray(imgUrls);//create array from regex obj        
 
-      jQuery(arr).each(function(){
-        allImgs[k] = new Image(); //new img obj
-        allImgs[k].src = (this[0] == '/' || this.match('http://')) ? this : baseURL + this;     //set src either absolute or rel to css dir
-        k++;
-      });
+          jQuery(arr).each(function(){
+            allImgs[k] = new Image(); //new img obj
+            allImgs[k].src = (this[0] == '/' || this.match('http://')) ? this : baseURL + this;     //set src either absolute or rel to css dir
+            k++;
+          });
+        }
+      }//loop
+      return allImgs;
     }
-  }//loop
-  return allImgs;
-}
 
-$.preloadCssImages();
+    $.preloadCssImages();
 
-//load into array
-var preloadedImgs = $.preloadCssImages();
+
+
+    var preloadedImgs = $.preloadCssImages();
+
+
+  });
 </script>
-
-
 </body>
 
 </html>
