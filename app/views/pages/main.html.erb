@@ -39,7 +39,7 @@
       </div>
       <div class="col s12 m4">
         <div class="icon-block">
-          <h2 class="center brown-text"><%= image_tag('contact.png', height: '82', width: '82')%></h2>
+          <h2 class="center brown-text modal-trigger"><%= image_tag('contact.png', height: '82', width: '82', class: 'modal-trigger')%></h2>
           <h5 class="center">Message Me</h5>
           <p class="light"></p>
         </div>
@@ -51,28 +51,42 @@
 
 
 
+
 <div class="container">
   <div class="section">
     <div class="row">
       <div class="col s12 center">
         <h3><i class="mdi-content-send brown-text"></i></h3>
-        <h4>About Me</h4>
-        <p class="left-align light" id="paraone">My name is Nicolas Berrizbeitia, originally from Venezuela. I have lived on this country for 13 years. My job is to build responsive, proffessional platforms that suit the needs of my clients. This is what I use to accomplish this:<p>
-          <table>
-            <tr>
-              <td><strong>Programming Languages:<strong> Ruby, JavaScript, Angular.js <strong>Methodologies:<strong> OO Design, TDD, Agile
-</td>
-            </tr>
-            <tr>
-              <td><strong>Databases and Servers:</strong> MySql, Postgres <strong>Frameworks:</strong> Rails, RSpec, FactoryGirl, Capybara, Selenium</td>
-            </tr>
-            <tr>
-              <td><strong>Views:</strong> HTML, HAML, XML, CSS, JSON, ERB, JQuery. <strong>Tools:</strong> Git, Rails, GitHub, DevTools</td>
-            </tr>
+        <h5>About Me</h5>
+        <p style="font-size: 20px;">My name is Nicolas Berrizbeitia, I am a human male and I love to create. My job is to build responsive, proffessional platforms that suit the needs of my clients
+        these are the technologies I use for this goal:</p>
+        <br/>
 
-          </table>
+        <ul>
+          <li>
+            <h5 class="center">Programming Languages</h5>
+            <p class="light" style="font-size: 18px; color: #8772EC">Ruby, JavaScript, Angular.js</p>
+          </li>
+          <br/>
+          <li>
+            <h5 class="center">Databases and Servers</h5>
+            <p class="light" style="font-size: 18px; color: #8772EC">MySql, Postgres, Amazon S3</p>
+          </li>
+          <br/>
+          <li>
+            <h5 class="center">Frameworks</h5>
+            <p class="light" style="font-size: 18px; color: #8772EC">Rails, RSpec, FactoryGirl, Capybara, Selenium</p>
+          </li>
+          <br/>
+          <li>
+            <h5 class="center">Views</h5>
+            <p class="light" style="font-size: 18px; color: #8772EC">HTML, HAML, XML, CSS, JSON, ERB, JQuery, Ajax.</p>
+          </li>
+        </ul>
 
-        <p>My passion...</p>
+        <br/><br/>
+
+        <p style="font-size: 20px;">Thats my job. My passion is:</p>
       </div>
     </div>
   </div>
@@ -105,13 +119,13 @@
       <div class="col s12 center">
         <h3><i class="mdi-content-send brown-text"></i></h3>
         <h4>How?</h4>
-        <p>by focusing on:</p>
+        <p style="font-size: 20px;">by focusing on:</p>
         <br/>
         <br/>
-        <p>Balanced, <span class="purple_accent">stimulating</span> designs</p><br/><br/>
-        <p>The <span class="purple_accent">psychology</span> of Target Audience</p><br/><br/>
-        <p>Solid Code base that safeguards <span class="purple_accent">immersion</span></p>
-        <p>And most importantly...</p><br/><br/>
+        <p style="font-size: 20px;">Balanced, <span class="purple_accent">stimulating</span> designs</p><br/><br/>
+        <p style="font-size: 20px;">The <span class="purple_accent">psychology</span> of Target Audience</p><br/><br/>
+        <p style="font-size: 20px;">Solid Code base that safeguards <span class="purple_accent">immersion</span></p>
+        <p style="font-size: 20px;">And most importantly...</p><br/><br/>
         <ul id="staggered-test">
           <li class="purple_accent s40">The element of Surpirse</li>
         </ul>
@@ -140,24 +154,45 @@
   <div class="section no-pad-bot">
     <div class="container">
       <div class="row center">
-        <h5 class="header col s12 light" style="float: right;" id="parafour">It is an experience in the mind of the beholder.</h5>
+        <h5 class="header col s12 light" id="parafour" style="font-size: 50px; margin-top: -50%; font-family: 'Courgette', cursive;">It is an experience in the mind of the beholder.</h5>
       </div>
     </div>
   </div>
   <div class="parallax" src="https://dumpyourphoto.com/photo/mAcplc3mPL" alt="Unsplashed background img 1"><%= image_tag("brainbanner.gif", alt: "Unsplashed background img 1")%></div>
 </div>
-
-
+<br/>
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="col s12 center">
+        <p style="font-size: 40px;">Webdevelopment is a techonological marvel bordering on magic. <span class="purple_accent">Let's remind them of that.</span></p>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!--  Scripts-->
 
 <script type="text/javascript" src="space.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+</script>
 <script type="text/javascript">
   var options = [
     {selector: '#staggered-test', offset: 200, callback: 'Materialize.showStaggeredList("#staggered-test", 3000)' }
   ];
   Materialize.scrollFire(options);
     
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+  });
 </script>
 
 
