@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'contacts/create'
+
+  get 'contacts/new'
+
   get 'pages/main'
 
   get 'pages/blog'
