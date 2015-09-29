@@ -1,2 +1,17 @@
-<h1>Contacts#new</h1>
-<p>Find me in app/views/contacts/new.html.erb</p>
+
+<div align="center" style="width: 80%; margin-left: 10%;">
+  <h1 class="header">Contact Nicolas</h3>
+
+  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+    <div style="width: 70%; margin-left: 15%; margin-right: 15%;">
+    	<div style="text-align: center;"><%= f.input :name, :required => true, style: "width: 70%; margin-left: 15%; margin-right: 15%;" %></div>
+    </div>
+    <div style="width: 70%; margin-left: 15%; margin-right: 15%;"><%= f.input :email, :required => true %></div>
+    <%= f.input :message, :as => :text, :required => true %>
+    <div>
+      </br>
+      <%= f.button :submit, 'Blast off!', :class=> "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
+

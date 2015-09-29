@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  get 'contacts/create'
-
-  get 'contacts/new'
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
 
   get 'pages/main'
 
   get 'pages/blog'
 
   get 'pages/porfolio'
+
 
   root to: 'pages#main'
 
