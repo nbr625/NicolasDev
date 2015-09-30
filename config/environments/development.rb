@@ -22,9 +22,12 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-  address: "smtp.gmail.com",
+  address: "smtp.sendgrid.net",
   port: 587,
-  domain: "nicolasdev.herokuapp.com"}
+  authentication: 'plain',
+  user_name: ENV['SENDGRID_USERNAME'],
+  password: ENV['SENDGRID_PASSWORD'],
+  domain: "'heroku.com'"}
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
