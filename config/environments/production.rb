@@ -27,7 +27,7 @@ Rails.application.configure do
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
-  Rails.application.routes.default_url_options[:host] = 'yoursite.herokuapp.com'
+  Rails.application.routes.default_url_options[:host] = 'nicolasdev.herokuapp.com'
 
   config.action_mailer.default_url_options = { :host => 'nicolasdev.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
@@ -38,7 +38,7 @@ Rails.application.configure do
   domain: ENV["GMAIL_DOMAIN"],
   authentication: "plain",
   enable_starttls_auto: true,
-  user_name: ENV["GMAIL_USERNAME"],
+  name: ENV["GMAIL_USERNAME"],
   password: ENV["GMAIL_PASSWORD"]
   }
   
