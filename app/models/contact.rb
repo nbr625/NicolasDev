@@ -1,7 +1,7 @@
 class Contact < MailForm::Base
   attribute :name,       :validate => true
   attribute :email,      :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attribute :phonenumber, :validate => /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
+  attribute :phonenumber, :validate => /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
   attribute :message
   
 
