@@ -9,10 +9,10 @@ class ContactsController < ApplicationController
     if @contact.valid?
       ContactMe.contact_email(@contact).deliver
       redirect_to root_path
-      flash[:notice] = "Message sent from {@contact.name}"
+      flash[:notice] = "Thank you, {@contact.name}. I will return your message soon."
     else     
       render :new
-      flash.now[:error] = 'Could not send message as is. Please check email and phone fields.'
+      flash.now[:error] = 'Could not send message as is. Please recheck email and phone fields.'
     end
   end
 end
