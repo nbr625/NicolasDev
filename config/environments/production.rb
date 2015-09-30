@@ -27,16 +27,19 @@ Rails.application.configure do
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
-  
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-
+  config.action_mailer.default_url_options = { :host => 'nicolasdev.herokuapp.com' }
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",  
     :port                 => 587,
-    :user_name            => ENV['GMAIL_USERNAME'],
-    :password             => ENV['GMAIL_PASSWORD'],
-    :authentication       => "plain",
-  :enable_starttls_auto => true
+    :domain               => 'gmail.com',
+    :enable_starttls_auto => true,
+    :user_name            => 'EMAIL_ADDRESS@gmail.com',
+    :password             => 'pass',
+    :authentication       => "plain"
+
   }
   
   # Do not fallback to assets pipeline if a precompiled asset is missed.
