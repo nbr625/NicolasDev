@@ -17,3 +17,4 @@
 /tmp
 .env
 Procfile
+config/application.yml

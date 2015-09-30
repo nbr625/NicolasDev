@@ -24,12 +24,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   address: "smtp.gmail.com",
   port: 587,
-  domain: ENV["GMAIL_DOMAIN"],
-  authentication: "plain",
-  enable_starttls_auto: true,
-  user_name: ENV["nbr625@gmail.com"],
-  password: ENV["GMAIL_PASSWORD"]
-  }
+  domain: "nicolasdev.herokuapp.com"}
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
