@@ -27,7 +27,7 @@ Rails.application.configure do
   domain: ENV["GMAIL_DOMAIN"],
   authentication: "plain",
   enable_starttls_auto: true,
-  user_name: ENV["GMAIL_USERNAME"],
+  user_name: ENV["nbr625@gmail.com"],
   password: ENV["GMAIL_PASSWORD"]
   }
   # Raise an error on page load if there are pending migrations.
