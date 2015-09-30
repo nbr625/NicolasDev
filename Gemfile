@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'rails_12factor'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'mail_form', '~> 1.5.1'
-gem 'mailcatcher'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.5.1'
